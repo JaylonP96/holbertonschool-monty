@@ -42,11 +42,52 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/* error_handler functions */
+void error_arguments(void);
+void open_error(char **);
+void invalidInstruction_error(char *invInstruction, unsigned int line);
+void not_int_err(unsigned int line);
+void malloc_error(void);
+
+/* error handler 2 */
+void pint_error(unsigned int line);
+void pop_error(unsigned int line);
+void swap_error(unsigned int line);
+void add_error(unsigned int line);
+void sub_error(unsigned int line);
+
+/* error_handler3 */
+void div_error(unsigned int line);
+void div_error2(unsigned int line);
+void mul_error(unsigned int line);
+void mod_error(unsigned int line);
+
+/*error handler4*/
+void pchar_error(unsigned int line);
+void pchar_error2(unsigned int line);
+
+/*opcodes */
+void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
+
+/* prototypes for stack */
 void push_monty(stack_t **top, unsigned int line_number);
 void pall_monty(stack_t **top, unsigned int line_number);
+void free_monty(stack_t *top);
 void pint_monty(stack_t **top, unsigned int line_number);
 void pop_monty(stack_t **top, unsigned int line_number);
-void swap_monty(stack_t **top, unsigned int line_number);
+
+/* stack operations */
+void swap_monty(stack_t **top, unsigned int line);
+void add_monty(stack_t **top, unsigned int line);
+void sub_monty(stack_t **top, unsigned int line_number);
+void div_monty(stack_t **top, unsigned int line_number);
+void mul_monty(stack_t **top, unsigned int line);
+
+/* more stack */
 void nop_monty(stack_t **top, unsigned int line_number);
-void add_monty(stack_t **top, unsigned int line_number);
-void free_monty(stack_t *top);
+void mod_monty(stack_t **top, unsigned int line_number);
+
+
+
+
+#endif

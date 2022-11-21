@@ -8,15 +8,13 @@
 void push_monty(stack_t **top, unsigned int line_number)
 {
 	stack_t *newNode;
+	int number;
 
 	(void) line_number;
 	newNode = malloc(sizeof(stack_t));
 
 	if (newNode == NULL)
-	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
-	}
+		malloc_error();
 
 	newNode->n = number;
 	newNode->prev = NULL;
@@ -49,4 +47,23 @@ void pall_monty(stack_t **top, unsigned int line_number)
 		tmp = tmp->next;
 	}
 }
+/**
+ * free_monty - free list
+ * Description: Function that frees a stack_t
+ * @top: head of stack
+ */
+void free_stack(stack_t *top)
+{
+	stack_t *temp;
 
+	if (top == NULL)
+		return;
+
+	while (top != NULL)
+	{
+		temp = top;
+		top = top->next;
+		free(temp);
+	}
+	free(top);
+}
