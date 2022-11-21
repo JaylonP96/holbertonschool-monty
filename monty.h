@@ -3,7 +3,7 @@
 
 /* who isn't going to make a reference to this? */
 
-char **holygrail
+char **holygrail;
 
 #include <unistd.h>
 #include <stdio.h>

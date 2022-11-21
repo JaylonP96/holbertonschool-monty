@@ -9,7 +9,7 @@ void error_arguments(void)
 	exit(EXIT_FAILURE);
 }
 /**
- * open_error - Main entry
+ * open_error - main entry
  * Description: print message if its not possible to open the file
  * @argv: arguments received by main, ni this case te filename
  */
@@ -21,7 +21,7 @@ void open_error(char **argv)
 	exit(EXIT_FAILURE);
 }
 /**
- * invalidInstruction_error - Main entry
+ * invalidInstruction_error - main entry
  * Description: print message if le to open the filehas an invalid instruction
  * @invInstruction: instruction
  * @line: line
@@ -32,7 +32,7 @@ void invalidInstruction_error(char *invInstruction, unsigned int line)
 	exit(EXIT_FAILURE);
 }
 /**
- * not_int_err - Main entry
+ * not_int_err - main entry
  * Description: print message if parameter received is not integer
  * @line: line
  */
@@ -42,7 +42,7 @@ void not_int_err(unsigned int line)
 	exit(EXIT_FAILURE);
 }
 /**
- * malloc_error - Main entry
+ * malloc_error - main entry
  * Description: print message if cant malloc anymore
  */
 void malloc_error(void)

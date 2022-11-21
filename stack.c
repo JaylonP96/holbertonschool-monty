@@ -52,7 +52,7 @@ void pall_monty(stack_t **top, unsigned int line_number)
  * Description: Function that frees a stack_t
  * @top: head of stack
  */
-void free_stack(stack_t *top)
+void free_monty(stack_t *top)
 {
 	stack_t *temp;
 
