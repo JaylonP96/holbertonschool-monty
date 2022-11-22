@@ -1,4 +1,5 @@
 #include "monty.h"
+int number;
 /**
  * push_monty - push (add) node to list
  * Description: Function that pushes a new node at the beginning of stack_t
@@ -8,7 +9,6 @@
 void push_monty(stack_t **top, unsigned int line_number)
 {
 	stack_t *newNode;
-	int number;
 
 	(void) line_number;
 	newNode = malloc(sizeof(stack_t));

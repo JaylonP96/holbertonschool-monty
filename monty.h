@@ -11,6 +11,8 @@ char **holygrail;
 #include <string.h>
 #include <stdarg.h>
 #include <fcntl.h>
+#include <ctype.h>
+extern int n;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -65,6 +67,11 @@ void mod_error(unsigned int line);
 /*error handler4*/
 void pchar_error(unsigned int line);
 void pchar_error2(unsigned int line);
+
+/* executer functions*/
+void open_and_read(char **argv);
+int is_number(char *token);
+int is_comment(char *token, int line_counter);
 
 /*opcodes */
 void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
